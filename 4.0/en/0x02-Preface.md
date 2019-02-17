@@ -2,17 +2,17 @@
 
 Welcome to the Application Security Verification Standard (ASVS) version 4.0. The ASVS is a community-effort to establish a framework of security requirements and controls that focus on normalizing the functional and non-functional security controls required when designing, developing and testing modern web applications.
 
-ASVS v4.0 is a culmination of community effort and industry feedback. In this release, we feel it is important to qualify the experiences of real world use cases relating to ASVS adoption. This will help newcomers to the standard plan their adoption of the ASVS, whilst assisting existing companies in learning from the experience of others.
+ASVS v4.0 is a culmination of community effort and industry feedback. In this release, we feel it is important to qualify the experiences of real world use cases relating to ASVS adoption. This will help newcomers to the ASVS standard to plan their adoption of the standard, whilst assisting existing companies in learning from the experience of others.
 
 We expect that there will most likely never be 100% agreement on this standard. Risk analysis is always subjective to some extent, which creates a challenge when attempting to generalize in a one-size-fits-all standard. However, we hope that the latest updates made in this version are a step in the right direction, and respectfully enhance the concepts introduced in this important industry standard.
 
 ## What's new in 4.0
 
-In June 2017, The National Institute of Science and Technology (NIST) released Special Publication (SP) 800-63-3, which is an updated set of digital identity guidelines. These technical guidelines provides an overview of general identity frameworks, using authenticators, credentials, and assertions together in a digital system, and a risk-based process of selecting assurance levels.
+In June 2017, The National Institute of Science and Technology (NIST) released Special Publication (SP) 800-63-3, which is an updated set of digital identity guidelines. These technical guidelines provide an overview of general identity frameworks, using authenticators, credentials, and assertions together in a digital system, and a risk-based process of selecting assurance levels.
 
 The single largest change in this version is the adoption of the NIST 800-63-3 guidelines, concentrating on introducing controls at authentication assurance levels 1 through 3. Although we do expect there to be some pushback on this adoption, it's important for standards to be aligned, particularly when a newer standard is evidence based.
 
-We have worked to comprehensively meet and exceed the requirements for addressing the OWASP Top 10 Risks (2017). As the OWASP Top 10 Risks is the bare minimum to avoid negligence, we have deliberately set nearly all controls relating to OWASP Top 10 Risks to be L1. This makes it easier for OWASP Top 10 adopters to continuously improve, especially when they want to continue the security journey by building security into every application and API.
+We have worked to comprehensively meet and exceed the requirements for addressing the OWASP Top 10 Risks (2017). As the OWASP Top 10 Risks are the bare minimum to avoid negligence, we have deliberately set nearly all controls relating to OWASP Top 10 Risks to be L1. This makes it easier for OWASP Top 10 adopters to continuously improve, especially when they want to continue the security journey by building security into every application and API.
 
 Similarly, we have ensured that the ASVS includes all the requirements and controls defined by the OWASP Top Ten Proactive Controls project (2018).
 
