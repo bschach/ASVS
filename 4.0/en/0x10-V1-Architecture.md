@@ -26,9 +26,8 @@ In this chapter, the ASVS covers off the primary aspects of any sound security a
 
 | # | Description | L1 | L2 | L3 | CWE | CWSS |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **1.2.1** | Verify the use of unique or special low-privilege operating system accounts for all application components, services, and servers. | ✓ | ✓ | ✓ | 250 | tbd |
-| **1.2.2** | Verify that communications between application components, including APIs, middleware and data layers, are authenticated with the least necessary privileges. | ✓ | ✓ | ✓ | 306 | tbd |
-| **1.2.3** | Verify that the application uses a single vetted authentication mechanism that is known to be secure, can be extended to include strong authentication, and has sufficient logging and monitoring to detect account abuse or breaches. | ✓ | ✓ | ✓ | 306 | tbd |
+| **1.2.1** | Verify that communications between application components, including APIs, middleware and data layers, are authenticated. | ✓ | ✓ | ✓ | 306 | tbd |
+| **1.2.2** | Verify that the application uses a single vetted authentication mechanism that is known to be secure, can be extended to include strong authentication, and has sufficient logging and monitoring to detect account abuse or breaches. | ✓ | ✓ | ✓ | 306 | tbd |
 
 ## V1.3 Session Management Architectural Requirements
 
@@ -39,10 +38,11 @@ In this chapter, the ASVS covers off the primary aspects of any sound security a
 
 | # | Description | L1 | L2 | L3 | CWE | CWSS |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **1.4.1** | Verify that trusted enforcement points such as at access control gateways, servers, and serverless functions enforce access controls. Never enforce access controls on the client. | | ✓ | ✓ | tbd | tbd |
-| **1.4.2** | Verify that the chosen access control solution is flexible enough to meet the application's needs.  | ✓ | ✓ | ✓ | tbd | tbd |
-| **1.4.3** | Verify enforcement of the principle of least privilege in functions, data files, URLs, controllers, services, and other resources. This implies protection against spoofing and elevation of privilege. | ✓ | ✓ | ✓ |  tbd | tbd |
-| **1.4.4** | Verify the application uses a single, centralized, and well-vetted access control mechanism for accessing  protected data and resources. To avoid disperse and potentially neglected resource access, all requests must pass through this mechanism. | ✓ | ✓ | ✓ | tbd | tbd |
+| **1.4.1** | Verify that communications between application components, including APIs, middleware and data layers, are performed with individual users with the least necessary privileges. | ✓ | ✓ | ✓ | 306 | tbd |
+| **1.4.2** | Verify that trusted enforcement points such as at access control gateways, servers, and serverless functions enforce access controls. Never enforce access controls on the client. | | ✓ | ✓ | tbd | tbd |
+| **1.4.3** | Verify that the chosen access control solution is flexible enough to meet the application's needs.  | ✓ | ✓ | ✓ | tbd | tbd |
+| **1.4.4** | Verify enforcement of the principle of least privilege in functions, data files, URLs, controllers, services, and other resources. This implies protection against spoofing and elevation of privilege. | ✓ | ✓ | ✓ |  tbd | tbd |
+| **1.4.5** | Verify the application uses a single, centralized, and well-vetted access control mechanism for accessing  protected data and resources. To avoid disperse and potentially neglected resource access, all requests must pass through this mechanism. | ✓ | ✓ | ✓ | tbd | tbd |
 
 ## V1.5 Input and Output Pipeline Architectural Requirements
 
@@ -95,13 +95,14 @@ In this chapter, the ASVS covers off the primary aspects of any sound security a
 
 | # | Description | L1 | L2 | L3 | CWE | CWSS |
 | :---: | :--- | :---: | :---:| :---: | :---: | :---: |
-| **1.19.1** | Verify the segregation of components of differing trust levels through well-defined security controls, firewall rules, API gateways, reverse proxies, cloud-based security groups, or similar mechanisms. | | ✓ | ✓ | tbd | tbd |
-| **1.19.2** | Verify that deploying binaries to untrusted devices makes use of binary signatures, trusted connections, and verified endpoints. | | ✓ | ✓ | tbd | tbd |
-| **1.19.3** | Verify that the build pipeline warns of out-of-date or insecure components and takes appropriate actions. | | ✓ | ✓ | tbd | tbd |
-| **1.19.4** | Verify that the build pipeline contains a build step to automatically build and verify the secure deployment of the application, particularly if the application infrastructure is software defined, such as cloud environment build scripts. | | ✓ | ✓ | tbd | tbd |
-| **1.19.5** | Verify that application deployments adequately sandbox, containerize and/or isolate at the network level to delay and deter attackers from attacking other applications, especially when they are performing sensitive or dangerous actions such as deserialization. | ✓ | ✓ | ✓ | 265 | tbd |
-| **1.19.6** | Verify that all mission critical components have at least one level of redundancy. |  |  | ✓ | tbd | tbd |
-| **1.19.7** | Verify  the application does not use unsupported, insecure, or deprecated client-side technologies such as NSAPI plugins, Flash, Shockwave, ActiveX, Silverlight, NACL, or client-side Java applets. | ✓ | ✓ | ✓ | tbd | tbd |
+| **1.19.1** | Verify the use of unique or special low-privilege operating system accounts for all application components, services, and servers. | ✓ | ✓ | ✓ | 250 | tbd |
+| **1.19.2** | Verify the segregation of components of differing trust levels through well-defined security controls, firewall rules, API gateways, reverse proxies, cloud-based security groups, or similar mechanisms. | | ✓ | ✓ | tbd | tbd |
+| **1.19.3** | Verify that deploying binaries to untrusted devices makes use of binary signatures, trusted connections, and verified endpoints. | | ✓ | ✓ | tbd | tbd |
+| **1.19.4** | Verify that the build pipeline warns of out-of-date or insecure components and takes appropriate actions. | | ✓ | ✓ | tbd | tbd |
+| **1.19.5** | Verify that the build pipeline contains a build step to automatically build and verify the secure deployment of the application, particularly if the application infrastructure is software defined, such as cloud environment build scripts. | | ✓ | ✓ | tbd | tbd |
+| **1.19.6** | Verify that application deployments adequately sandbox, containerize and/or isolate at the network level to delay and deter attackers from attacking other applications, especially when they are performing sensitive or dangerous actions such as deserialization. | ✓ | ✓ | ✓ | 265 | tbd |
+| **1.19.7** | Verify that all mission critical components have at least one level of redundancy. |  |  | ✓ | tbd | tbd |
+| **1.19.8** | Verify  the application does not use unsupported, insecure, or deprecated client-side technologies such as NSAPI plugins, Flash, Shockwave, ActiveX, Silverlight, NACL, or client-side Java applets. | ✓ | ✓ | ✓ | tbd | tbd |
 
 ## References
 
